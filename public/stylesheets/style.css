@@ -1,0 +1,58 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #1e293b;
+  color: white;
+}
+
+a {
+  color: #00b7ff;
+}
+
+/* index style */
+
+.message-card {
+  /* sizing */
+  background-color: #0f172a;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.message-card .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+/* new message form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.3rem;
+}
+
+/* Desktop design */
+@media (min-width: 1024px) {
+  .message-card {
+    max-width: 40%;
+  }
+
+  form {
+    gap: 1rem;
+  }
+
+  input {
+    width: 360px;
+  }
+}

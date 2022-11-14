@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  a(href="/new")="New Message"
+  h1= title
+  p Welcome to #{title}
+  ul
+  each message in messages
+    li
+      <div class="message-card">
+        div(class="top")
+          h2=message.user
+          p=message.added
+        p=message.text
+      </div>
