@@ -10,6 +10,6 @@ block content
       <div class="message-card">
         div(class="top")
           h2=message.user
-          p=message.added
+          p=moment(message.added).fromNow()
         p=message.text
       </div>

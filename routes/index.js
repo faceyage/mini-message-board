@@ -7,18 +7,18 @@ const messages = [
   {
     text: "Hi there!",
     user: "Amando",
-    added: moment().startOf("minute").fromNow(),
+    added: new Date(),
   },
   {
     text: "Hello World!",
     user: "Charles",
-    added: moment().startOf("minute").fromNow(),
+    added: new Date(),
   },
 ];
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Mini Messageboard", messages: messages });
+  res.render("index", { title: "Mini Messageboard", messages: messages, moment: moment });
 });
 
 /* Add new message. */
@@ -28,7 +28,7 @@ router.post("/new", function (req, res, next) {
   messages.push({
     text: message,
     user: name,
-    added: moment().startOf("minute").fromNow(),
+    added: new Date(),
   });
   console.log(`Added new Message. User: ${name} Message: ${message}`);
   res.redirect("/");
